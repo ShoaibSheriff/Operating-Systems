@@ -33,7 +33,7 @@ Since passing the password in plain text to kernel may be risky, the user level 
 After this, the data is passed to the system cal.
 		
 The system calls takes in the following struct as a void pointer :
-```
+```c
 typedef struct E_Struct {
 	
 	char* infile; // Input file name (absolute/relative)
