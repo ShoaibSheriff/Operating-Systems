@@ -17,7 +17,7 @@ Note :	Since xcpenc.c uses openssl/md5.h, the Makefile needs ssl library.
 		Some of the AES cipher encryption code has been borrowed from www.kernel.org.
 
 
-## USERLEVEL CODE :
+## User Level Code :
 
 The user needs to call the executables genarted by make command with all the necessary paramteres :
 	"./xcpenc -p 12345678 -e  "file_in.txt" "file_out.txt"
