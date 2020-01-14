@@ -43,7 +43,7 @@ static bool parse(E_Struct *e_struct, int argc, char **argv)
 				
 				e_struct->keylen = MD5_DIGEST_LENGTH;
                 break;  
-	case 'c': 
+	    case 'c': 
 
 		if (e_struct->flags == 1 || e_struct->flags == 2) {
 			error = true;
@@ -69,7 +69,7 @@ static bool parse(E_Struct *e_struct, int argc, char **argv)
 			else break;
 		}
 		break;
-	case 'd': 
+	    case 'd': 
 
 		if (e_struct->flags == 1 || e_struct->flags == 4) {
 
@@ -97,7 +97,7 @@ static bool parse(E_Struct *e_struct, int argc, char **argv)
 			else break;
 		}
 		break;
-	case 'e':
+	    case 'e':
 
 		if (e_struct->flags == 2 || e_struct->flags == 4) {
 			error = true;
