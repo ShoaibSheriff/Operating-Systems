@@ -6,7 +6,7 @@ To create an auto back up stackable file system layer "bkpfs". File system shoul
 
 1) fs/bkpfs - This folder contains all the files of the loadable kernel module.
 2) user - This folder contains all the user level codes.
-3) include/linux/bkpfs/bkpfs_common.h - This is the common header file. It contains the IOCTL definition.
+3) header/bkpfs_common.h - This is the common header file. It contains the IOCTL definition.
 
 
 ## Kernel level code
