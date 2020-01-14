@@ -729,5 +729,4 @@ static void __exit exit_sys_cpenc(void) {
 module_init(init_sys_cpenc);
 module_exit(exit_sys_cpenc);
 MODULE_AUTHOR("ssheriff");
-MODULE_DESCRIPTION("CSE506_HW1");
 MODULE_LICENSE("GPL");
