@@ -216,8 +216,8 @@ int main(int argc, char * argv[]) {
     }
 
     out:
-        if (e_struct && e_struct - > infile)
-            free(e_struct - > infile);
+    if (e_struct && e_struct - > infile)
+        free(e_struct - > infile);
     if (e_struct && e_struct - > outfile)
         free(e_struct - > outfile);
     if (e_struct && e_struct - > keybuf)
