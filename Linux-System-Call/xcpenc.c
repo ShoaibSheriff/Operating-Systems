@@ -51,7 +51,7 @@ static bool parse(E_Struct *e_struct, int argc, char **argv)
 				}
 				e_struct->flags = 4;
 
-                index = optind-1;
+                                index = optind-1;
 				while(index < argc){
 					next = strdup(argv[index]);
 					index++;
@@ -79,7 +79,7 @@ static bool parse(E_Struct *e_struct, int argc, char **argv)
 			
 				e_struct->flags = 2;
 
-                index = optind-1;
+                                index = optind-1;
 				while(index < argc){
 					next = strdup(argv[index]);
 					index++;
@@ -106,7 +106,7 @@ static bool parse(E_Struct *e_struct, int argc, char **argv)
 			
 				e_struct->flags = 1;
 
-                index = optind-1;
+                                index = optind-1;
 				while(index < argc){
 					next = strdup(argv[index]);
 					index++;
