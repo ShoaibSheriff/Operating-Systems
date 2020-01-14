@@ -43,86 +43,86 @@ static bool parse(E_Struct *e_struct, int argc, char **argv)
 				
 				e_struct->keylen = MD5_DIGEST_LENGTH;
                 break;  
-			case 'c': 
-			
-				if (e_struct->flags == 1 || e_struct->flags == 2) {
-					error = true;
-					break;
-				}
-				e_struct->flags = 4;
+	case 'c': 
 
-                                index = optind-1;
-				while(index < argc){
-					next = strdup(argv[index]);
-					index++;
-					if(next[0] != '-'){
-						if (e_struct->infile == NULL) {
-							e_struct->infile = (char *) malloc
-								(strlen(next) + 1);
-							strcpy(e_struct->infile, next);
-						} else if (e_struct->outfile == NULL) {
-							e_struct->outfile = (char *) malloc
-								(strlen(next) + 1);
-							strcpy(e_struct->outfile, next);
-						}
-					}
-					else break;
-				}
-				break;
-			case 'd': 
+		if (e_struct->flags == 1 || e_struct->flags == 2) {
+			error = true;
+			break;
+		}
+		e_struct->flags = 4;
 
-				if (e_struct->flags == 1 || e_struct->flags == 4) {
-
-					error = true;
-					break;
+		index = optind-1;
+		while(index < argc){
+			next = strdup(argv[index]);
+			index++;
+			if(next[0] != '-'){
+				if (e_struct->infile == NULL) {
+					e_struct->infile = (char *) malloc
+						(strlen(next) + 1);
+					strcpy(e_struct->infile, next);
+				} else if (e_struct->outfile == NULL) {
+					e_struct->outfile = (char *) malloc
+						(strlen(next) + 1);
+					strcpy(e_struct->outfile, next);
 				}
-			
-				e_struct->flags = 2;
+			}
+			else break;
+		}
+		break;
+	case 'd': 
 
-                                index = optind-1;
-				while(index < argc){
-					next = strdup(argv[index]);
-					index++;
-					if(next[0] != '-'){
-						if (e_struct->infile == NULL) {
-							e_struct->infile = (char *) malloc
-								(strlen(next) + 1);
-							strcpy(e_struct->infile, next);
-						} else if (e_struct->outfile == NULL) {
-							e_struct->outfile = (char *) malloc
-								(strlen(next) + 1);
-							strcpy(e_struct->outfile, next);
-						}
-					}
-					else break;
-				}
-				break;
-			case 'e':
+		if (e_struct->flags == 1 || e_struct->flags == 4) {
 
-				if (e_struct->flags == 2 || e_struct->flags == 4) {
-					error = true;
-					break;
-				}
-			
-				e_struct->flags = 1;
+			error = true;
+			break;
+		}
 
-                                index = optind-1;
-				while(index < argc){
-					next = strdup(argv[index]);
-					index++;
-					if(next[0] != '-'){
-						if (e_struct->infile == NULL) {
-							e_struct->infile = (char *) malloc
-								(strlen(next) + 1);
-							strcpy(e_struct->infile, next);
-						} else if (e_struct->outfile == NULL) {
-							e_struct->outfile = (char *) malloc
-								(strlen(next) + 1);
-							strcpy(e_struct->outfile, next);
-						}
-					}
-					else break;
+		e_struct->flags = 2;
+
+		index = optind-1;
+		while(index < argc){
+			next = strdup(argv[index]);
+			index++;
+			if(next[0] != '-'){
+				if (e_struct->infile == NULL) {
+					e_struct->infile = (char *) malloc
+						(strlen(next) + 1);
+					strcpy(e_struct->infile, next);
+				} else if (e_struct->outfile == NULL) {
+					e_struct->outfile = (char *) malloc
+						(strlen(next) + 1);
+					strcpy(e_struct->outfile, next);
 				}
+			}
+			else break;
+		}
+		break;
+	case 'e':
+
+		if (e_struct->flags == 2 || e_struct->flags == 4) {
+			error = true;
+			break;
+		}
+
+		e_struct->flags = 1;
+
+		index = optind-1;
+		while(index < argc){
+			next = strdup(argv[index]);
+			index++;
+			if(next[0] != '-'){
+				if (e_struct->infile == NULL) {
+					e_struct->infile = (char *) malloc
+						(strlen(next) + 1);
+					strcpy(e_struct->infile, next);
+				} else if (e_struct->outfile == NULL) {
+					e_struct->outfile = (char *) malloc
+						(strlen(next) + 1);
+					strcpy(e_struct->outfile, next);
+				}
+			}
+			else break;
+		}
 
                 break; 
             case ':':  
