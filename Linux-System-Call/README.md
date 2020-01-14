@@ -2,7 +2,7 @@
 ## Aim
 This project modifies the linux kernel and adds a system call "sys_cpenc" that supports file encryption. A user program "xcpenc.c" tests the various functionalities of the system call.
 
-## File descriptions :
+## File descriptions
 
 1) xcpenc.c - This is a user-application which invokes the sys_cpenc() system call and tests its functionalities.
 2) sys_cpenc.c - This is the loadable kernel module which consists of the system call implementation. The function supports plain copy, encryption and decryption. 
@@ -17,7 +17,7 @@ Note :	Since xcpenc.c uses openssl/md5.h, the Makefile needs ssl library.
 		Some of the AES cipher encryption code has been borrowed from www.kernel.org.
 
 
-## User Level Code :
+## User Level Code
 
 The user needs to call the executables genarted by make command with all the necessary paramteres :
 	"./xcpenc -p 12345678 -e  "file_in.txt" "file_out.txt"
